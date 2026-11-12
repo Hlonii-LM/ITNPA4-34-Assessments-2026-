@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v1.0.0.css">
+
+
+<div id="ldavis_el628025380684121125342139826" style="background-color:white;"></div>
+<script type="text/javascript">
+
+var ldavis_el628025380684121125342139826_data = {"mdsDat": {"x": [-0.05148123683860634, -0.10829006770381308, 0.1597713045424194], "y": [0.12135517490930638, -0.09563701362306282, -0.025718161286243508], "topics": [1, 2, 3], "cluster": [1, 1, 1], "Freq": [41.71569139804727, 32.62373667027309, 25.660571931679648]}, "tinfo": {"Term": ["text", "data", "science", "learning", "modeling", "topic", "networks", "neural", "learning", "modeling", "topic", "neural", "networks", "data", "science", "text", "text", "networks", "neural", "topic", "modeling", "data", "science", "learning", "data", "science", "networks", "neural", "learning", "topic", "modeling", "text"], "Freq": [3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.6419545730547493, 1.6320006906666409, 1.6320006905848996, 0.9395777896004667, 0.9395777891619933, 0.23555374471899265, 0.23555374471899265, 0.2526054291417741, 2.915239465217705, 0.901313021815355, 0.9013130213931736, 0.23733373870961497, 0.23733373863160798, 0.22623895928680582, 0.22623895928680582, 0.22726169630808846, 1.6127393112875144, 1.6127393112875144, 0.232602711101625, 0.23260271110291053, 0.2323863433319364, 0.2318585917771774, 0.23185859177670445, 0.23211537603695398], "Total": [3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.101602612694774, 2.101193021074953, 2.1011930210716923, 2.073493522096551, 2.0734935220789734, 2.074532015293313, 2.074532015293313, 3.399960270396433, 3.399960270396433, 2.0734935220789734, 2.073493522096551, 2.1011930210716923, 2.101193021074953, 2.074532015293313, 2.074532015293313, 2.101602612694774, 2.074532015293313, 2.074532015293313, 2.0734935220789734, 2.073493522096551, 2.101602612694774, 2.1011930210716923, 2.101193021074953, 3.399960270396433], "Category": ["Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3"], "logprob": [8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0, -1.5202, -1.5263, -1.5263, -2.0784, -2.0784, -3.4619, -3.4619, -3.392, -0.7003, -1.8741, -1.8741, -3.2085, -3.2085, -3.2564, -3.2564, -3.2519, -1.0522, -1.0522, -2.9886, -2.9886, -2.9895, -2.9918, -2.9918, -2.9907], "loglift": [8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0, 0.6275, 0.6216, 0.6216, 0.0827, 0.0827, -1.3013, -1.3013, -1.7254, 0.9663, 0.287, 0.287, -1.0607, -1.0607, -1.0958, -1.0958, -1.1042, 1.1084, 1.1084, -0.8274, -0.8274, -0.8418, -0.8439, -0.8439, -1.3241]}, "token.table": {"Topic": [3, 1, 1, 1, 2, 1, 2, 3, 2, 1], "Freq": [0.9640728536634442, 0.9516546981427214, 0.9518402069395873, 0.48227785105272825, 0.48227785105272825, 0.48227785104863985, 0.48227785104863985, 0.9640728536634442, 0.8823632517477041, 0.9518402069410645], "Term": ["data", "learning", "modeling", "networks", "networks", "neural", "neural", "science", "text", "topic"]}, "R": 8, "lambda.step": 0.01, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "topic.order": [3, 2, 1]};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el628025380684121125342139826", ldavis_el628025380684121125342139826_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el628025380684121125342139826", ldavis_el628025380684121125342139826_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://d3js.org/d3.v5.js", function(){
+         LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el628025380684121125342139826", ldavis_el628025380684121125342139826_data);
+            })
+         });
+}
+</script>
